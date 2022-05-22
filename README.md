@@ -14,12 +14,13 @@ should not be run against a target network without permission.
 -sV: Enables version detection, which will detect what versions are running on what
 port.
 
+```
 nmap -v -p- --min-rate 5000 -sV -sC 1.1.1.1
 nmap -sV -sC 1.1.1.1
 
 curl -v http://1.1.1.1
 return 302 not found
-
+```
 
 ------------
 
