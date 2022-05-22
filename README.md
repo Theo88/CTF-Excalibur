@@ -17,3 +17,4 @@ port.
 nmap -v -p- --min-rate 5000 -sV -sC 10.129.136.91
 
 curl -v http://{ip}
+return 302 not found
