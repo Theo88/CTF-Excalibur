@@ -18,10 +18,15 @@ port.
 nmap -v -p- --min-rate 5000 -sV -sC 1.1.1.1
 nmap -sV -sC 1.1.1.1
 
+nmap -p80,5040,5985,7680 1.1.1.1
+nmap -p- -sV -sC 1.1.1.1
+
 curl -v http://1.1.1.1
 return 302 not found
 ```
 
 ------------
+
+
 
 gobuster
