@@ -31,6 +31,8 @@ return 302 not found
 
 gobuster
 
+gobuster dir --url http://ignition.htp/ --wordlist /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt 
+
 ------------
 LFI or Local File Inclusion
 RFI or Remote File Inclusion
@@ -61,3 +63,19 @@ evil-winrm -i 10.129.229.59 -u Administrator -p badminton
 
 read file on system : 
 cat flag.txt
+
+------------------------
+
+magento 
+
+login page : /admin
+
+admin admin123
+admin root123
+admin password1
+admin administrator1
+admin changeme1
+admin password123
+admin qwerty123
+admin administrator123
+admin changeme123
