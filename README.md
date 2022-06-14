@@ -40,6 +40,9 @@ https://github.com/carlospolop/Auto_Wordlists/blob/main/wordlists/file_inclusion
 examples
 http://unika.htb/index.php?page=../../../../../../../../windows/system32/drivers/etc/hosts
 
+Include PHP : 
+https://www.php.net/manual/en/function.include.php
+
 
 
 
