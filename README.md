@@ -99,6 +99,8 @@ Burpsuite (intercepting HTTP traffic) (linked with plugin foxyproxy)
 Proxy -> HTTP history
 POST -> send to repeater
 
+https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection#handlebars-nodejs
+
 {{#with "s" as |string|}}
   {{#with "e"}}
     {{#with split as |conslist|}}
@@ -122,6 +124,17 @@ POST -> send to repeater
 
 
 
+---------------------
 
+FIRMWARE :
+
+bin analysis
+
+binwalk file.bin
+
+fdisk -l file.bin
  
-
+Is it encrypted?
+ High entropy = probably encrypted (or compressed). Low entropy = probably not
+ 
+ 
