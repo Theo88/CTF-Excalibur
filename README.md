@@ -183,3 +183,15 @@ fdisk -l file.bin
  
  
  -------------------------
+ 
+ 
+ telnet 1.1.1.1 1521
+ 
+ 
+ --------------------------
+ 
+ Search Tools 
+ grep -r "login" /etc/
+ 
+ Device_Admin   in telnetd.sh
+ password in etc/config/sign
