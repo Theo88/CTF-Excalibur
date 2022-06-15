@@ -195,3 +195,9 @@ fdisk -l file.bin
  
  Device_Admin   in telnetd.sh
  password in etc/config/sign
+
+
+----------------
+HARDWARE TOOLS
+
+- https://www.pcbgogo.com/GerberViewer.html
