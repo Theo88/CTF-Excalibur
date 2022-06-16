@@ -203,3 +203,23 @@ HARDWARE TOOLS
 - https://www.pcbgogo.com/GerberViewer.html
 - https://maxpromer.github.io/LCD-Character-Creator/
 - https://onlinehextools.com/convert-hex-to-binary
+
+
+------------
+
+I2C communication :
+
+ Wire.h to communicate with the i2c devices, the library functions take the 7 bit address and internally appends the 0 or 1 onto the end for write/read.
+ 
+ 7-bit I2C Slave Address
+ 8-bit I2C Slave Address
+ 10-bit I2C Slave Address
+ https://www.totalphase.com/blog/2019/05/how-to-identify-the-i2c-slave-addressing-standard-for-developers/
+ 
+ KEYPAD:
+ https://github.com/RobTillaart/I2CKeyPad/blob/master/examples/I2CKeypad_interrupts_1/I2CKeypad_interrupts_1.ino
+ 
+ LIQUID CRYSTAL LED 
+ https://www.arduino.cc/reference/en/libraries/liquidcrystal-i2c/
+ 
+ 
