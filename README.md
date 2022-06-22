@@ -242,6 +242,7 @@ I2C communication :
  
  SMALI Dalvik opcodes
  http://pallergabor.uw.hu/androidblog/dalvik_opcodes.html
+ https://hackcatml.tistory.com/category/Information%20Security/Android
  
  Conditional jump branch:
 
@@ -258,10 +259,6 @@ I2C communication :
 "if-gtz vA, :cond_ " If vA is greater than 0 jump to :cond_
 "if-lez vA, :cond_ " Jump to :cond_ if vA is less than or equal to 0
 
-作者：WilburLi
-链接：https://www.jianshu.com/p/2f2fa49c1f53
-来源：简书
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
  
  https://www.youtube.com/watch?v=aKQLjNZZIKs&ab_channel=BigBrotherStream
  
