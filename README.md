@@ -235,4 +235,35 @@ I2C communication :
  LIQUID CRYSTAL LED 
  https://www.arduino.cc/reference/en/libraries/liquidcrystal-i2c/
  
+ --------------------------------
+ 
+ ANDROID
+ 
+ 
+ SMALI Dalvik opcodes
+ http://pallergabor.uw.hu/androidblog/dalvik_opcodes.html
+ 
+ Conditional jump branch:
+
+"if-eq vA, vB, :cond_ " If vA is equal to vB then go to: cond_
+"if-ne vA, vB, :cond_ " If vA is not equal to vB then go to: cond_
+"if-lt vA, vB , :cond_ " if vA is less than vB then go to: cond_
+"if-ge vA, vB, :cond_ " if vA is greater than or equal to vB then go to: cond_
+"if-gt vA, vB, :cond_ " if vA is greater than vB then jump to: cond_
+"if-le vA, vB, :cond_ " If vA is less than or equal to vB then jump to: cond_
+"if-eqz vA, :cond_ " If vA is equal to 0 then jump to: cond_
+"if -nez vA, :cond_ "If vA is not equal to 0, jump to: cond_
+"if-ltz vA, :cond_ " If vA is less than 0, jump to: cond_
+"if-gez vA, :cond_ " If vA is greater than or equal to 0 jump to :cond_
+"if-gtz vA, :cond_ " If vA is greater than 0 jump to :cond_
+"if-lez vA, :cond_ " Jump to :cond_ if vA is less than or equal to 0
+
+作者：WilburLi
+链接：https://www.jianshu.com/p/2f2fa49c1f53
+来源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+ 
+ https://www.youtube.com/watch?v=aKQLjNZZIKs&ab_channel=BigBrotherStream
+ 
+ 
  
