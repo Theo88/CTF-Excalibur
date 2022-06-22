@@ -39,7 +39,7 @@ see shares
 smbclient -L IP   
 smbclient -L IP -U Administrator
 
-smbclient \\\\IP\\C$ -U Administrator
+smbclient //IP/C$ -U Administrator
 
 
 smbclient -h IP
