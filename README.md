@@ -53,7 +53,7 @@ PSexec.py
 
 SQL> xp_cmdshell dir
 SQL> xp_cmdshell whoami
-//print our current directory
+//print working directory  pwd
 SQL> xp_cmdshell "powershell -c pwd"
 
 
