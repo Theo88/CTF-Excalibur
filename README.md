@@ -48,6 +48,9 @@ smbclient -N -L \\\\{TARGET_IP}\\
 
 PSexec.py
 
+└──╼ [★]$ mssqlclient.py LOGIN:PASS@1.1.1.1 -windows-auth
+└──╼ [★]$ mssqlclient.py ARCHETYPE/sql_svc:M3g4c0rp123@10.129.43.111 -windows-auth
+
 https://github.com/SecureAuthCorp/impacket/tree/master/examples
 
 -------------
