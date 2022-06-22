@@ -40,11 +40,15 @@ smbclient -L IP
 smbclient -L IP -U Administrator
 
 smbclient //IP/C$ -U Administrator
-
-
 smbclient -h IP
 
+smbclient -N -L \\\\{TARGET_IP}\\
+-N : No password
+-L : This option allows you to look at what services are available on a server
+
 PSexec.py
+
+https://github.com/SecureAuthCorp/impacket/tree/master/examples
 
 -------------
 
