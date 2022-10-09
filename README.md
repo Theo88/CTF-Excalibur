@@ -264,3 +264,24 @@ I2C communication :
  
  
  
+-------------
+
+Host: 
+#add directly (without opening hosts file)
+echo "10.129.250.94 thetoppers.htb" | sudo tee -a /etc/host
+
+
+enumeration
+Use an enumeration tool like `wfuzz`, `ffuf` etc.
+
+ffuf -c -w /usr/share/SecLists/Discovery/DNS/subdomains-top1million-20000.txt -u http://thetoppers.htb -H "Host: FUZZ.thetoppers.htb"
+
+ffuf -c -w /usr/share/SecLists/Discovery/DNS/subdomains-top1million-20000.txt -u http://thetoppers.htb -H "Host: FUZZ.thetoppers.htb" -fs 11952
+
+
+tldr 
+https://github.com/tldr-pages/tldr
+sudo pip3 install tldr
+
+
+
