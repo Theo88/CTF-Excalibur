@@ -283,5 +283,38 @@ tldr
 https://github.com/tldr-pages/tldr
 sudo pip3 install tldr
 
+--------------------
+
+Crunch
+
+https://null-byte.wonderhowto.com/how-to/tutorial-create-wordlists-with-crunch-0165931/
+
+-b : the maximum size of the wordlist (requires -o START)
+-c : numbers of lines to write to the wordlist (requires -o START)
+-d : limit the number of duplicate characters
+-e : stop generating words at a certain string
+-f : specify a list of character sets from the charset.lst file
+-i : invert the order of characters in the wordlist
+-l : allows the literal interpretation of @,%^ when using -t
+-o : the output wordlist file
+-p : print permutations without repeating characters (cannot be used with -s)
+-q : Like the -p option except it reads the strings from a specified file
+-r : resume a previous session (cannot be used with -s)
+-s : specify a particular string to begin the wordlist with
+-t : set a specific pattern of @,%^
+-z : compress the output wordlist file, accompanied by -o
+
+Reference:
+@ represents lowercase letters
+, represents uppercase letters
+% represents numbers
+^ represents special characters
+
+Examples:
+
+1) > crunch 5 5 abcde14 -t @@@14 -d 2@ -o syskey.txt -z
+
+A zipped syskey.txt wordlist starting with "aab14" and ending in "eed14" will be produced from the above. The reason why the start is not "aaa14" is because -d 2@ allows for only 2 duplicate lowercase letters. Adding -i would invert the results, and adding -e dde14 would stop after the line "dde14" (or "41edd" in the case of an inverted output) is produced.
+
 
 
