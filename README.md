@@ -268,15 +268,23 @@ I2C communication :
 
 Host: 
 #add directly (without opening hosts file)
-echo "10.129.250.94 thetoppers.htb" | sudo tee -a /etc/host
+echo "10.129.152.221 thetoppers.htb" | sudo tee -a /etc/hosts
 
 
-enumeration
+
+----enumeration----
 Use an enumeration tool like `wfuzz`, `ffuf` etc.
 
 ffuf -c -w /usr/share/SecLists/Discovery/DNS/subdomains-top1million-20000.txt -u http://thetoppers.htb -H "Host: FUZZ.thetoppers.htb"
 
 ffuf -c -w /usr/share/SecLists/Discovery/DNS/subdomains-top1million-20000.txt -u http://thetoppers.htb -H "Host: FUZZ.thetoppers.htb" -fs 11952
+
+---Enumeration with Gobuster ----
+
+gobuster vhost -w /opt/useful/SecLists/Discovery/DNS/subdomains-top1million-5000.txt -u http://thetoppers.htb
+
+
+
 
 
 tldr 
