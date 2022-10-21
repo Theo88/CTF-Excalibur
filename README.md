@@ -324,5 +324,44 @@ Examples:
 
 A zipped syskey.txt wordlist starting with "aab14" and ending in "eed14" will be produced from the above. The reason why the start is not "aaa14" is because -d 2@ allows for only 2 duplicate lowercase letters. Adding -i would invert the results, and adding -e dde14 would stop after the line "dde14" (or "41edd" in the case of an inverted output) is produced.
 
+-----------------------------------
+
+
+Mongod Write-up
+
+Connecting to MongoDB
+In order to connect to the remote MongoDB server running on the target box, we will need to install the
+mongodb utility, which can be done on Debian-based Linux distributions (like Parrot, Kali and Ubuntu) by
+downloading the following tar archive file.
+We must then extract the contents of the tar archive file using the tar utility.
+Navigate to the location where the mongo binary is present.
+Let's now try to connect to the MongoDB server running on the remote host as an anonymous user.
+We have successfully connected to the remote MongoDB instance as an anonymous user. We can list the
+databases present on the MongoDB server using the following command.
+
+curl -O https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-3.4.7.tgz
+
+tar xvf mongodb-linux-x86_64-3.4.7.tgz
+
+cd mongodb-linux-x86_64-3.4.7/bin
+
+./mongo mongodb://{target_IP}:27017
+
+____________________________________________________
+
+s3.domaine.com
+
+S3 bucket
+
+awscli
+
+aws configure
+
+aws --endpoint=http://s3.thetoppers.htb s3 ls
+aws --endpoint=http://s3.thetoppers.htb s3 ls s3://thetoppers.htb
+
+
+
+
 
 
